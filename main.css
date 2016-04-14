@@ -1,0 +1,586 @@
+@font-face {
+    font-family: opensans;
+    src: url(./OpenSans-Regular.ttf);
+}
+@font-face {
+    font-family: opensans-light;
+    src: url(./OpenSans-Light.ttf);
+}
+
+html {padding:0px;margin:0px;font-family:opensans, Helvetica;}
+body {min-height:100%;width:100%;padding:0px;margin:0px;border-top:8px solid #048;}
+
+/* General specifications */
+a {text-decoration:none;color:#000;font-weight:bold;}
+p {line-height:1.5em;}
+ul li {list-style: none; margin: 0; padding: 0; font-size:1em; line-height:1.5em;}
+ul li:before {content: "\25B7  "; color: #48a; }
+dt {font-weight:bold;}
+dd {line-height:1.5em;margin:10px 0px 1.5em 0px;}
+time {border-bottom:1px dotted #555;}
+
+table {width:100%;}
+th {background-color:#3cc;color:#fff;}
+tr td {border-bottom:2px solid #3cc;padding:5px 0px 5px 0px;}
+tr:hover td {background-color:#eee;}
+img {max-width:100%;}
+button {background-color:#48a;color:#fff;font-weight:bold;border: 2px solid #48a;}
+button:hover, button:active {background-color:#fff;border-color:#48a;color:#48a;}
+
+/* Frame elements */
+header {color:#ccf;min-height:50px;background-color:#fff;border-bottom:1px solid #ccc;padding:5px 0px 5px 0px;margin:0px;font-family:opensans-light;}
+div.generalnav {width:calc(100% - 10px);background-color:#ddd;border-bottom:1px solid #ccc;color:#aaa;padding:5px 0px 5px 10px;}
+nav {width:250px;position:fixed;top:calc(7em + 18px);padding-bottom:3em;font-family:opensans-light;font-size:0.95em;}
+main {display:inline-block;width:calc(100% - 400px);padding-left:300px;vertical-align:top;padding-bottom:3em;padding-top:10px;}
+footer {width:89.9%;border-top:1px solid #ccc;background-color:#333;padding:15px 5% 15px 5%;color:#fff;font-weight:bold;}
+footer:target {background-color:#aaa;}
+section.addsec {width:89.9%;border-top:2px solid #048;background-color:#ddd;color:#048;padding:0px 5% 15px 5%;}
+section.addsec:target {background-color:#3f3;}
+
+@media screen and (max-width:50em) {
+	nav {display:block;width:100%;background-color:#ddd;padding:0.5em 0px 0.5em 0px;min-height:1em;border-bottom:1px solid #ccc;position:initial;}
+	nav:hover, nav:active {display:block;width:100%;background-color:#ddd;padding-top:1.5em;z-index:20;}
+	main {width:calc(100% - 30px);padding-left:20px;}
+}
+
+@media screen and (min-width:50.1em) and (max-width:65em)  {
+	nav {position:initial;display:inline-block;padding-top:29px;}
+	main {width:calc(100% - 330px);padding-left:20px;}
+}
+@media screen and (max-height:50.1em) and (min-width:50.1em) {
+	nav {position:initial;display:inline-block;padding-top:29px;}
+	main {width:calc(100% - 330px);padding-left:20px;}
+}
+@media screen and (min-width:50em) and (min-height:40em) {
+	main {min-height:34em;}
+}
+
+/* Adding section */
+section.addsec h2 {margin:10px 0px 4px 0px;padding:0px;font-size:1.2em;}
+section.addsec input {width:calc(100% - 115px);padding:10px 0px 10px 5px;border-width:0px;}
+section.addsec select {width:calc(100% - 115px);padding:10px 0px 10px 5px;background-color:#fff;}
+section.addsec button {width:100px;padding:8px 0px 8px 0px;}
+
+/* Header */
+header h1 {margin:0px;padding:5px 0px 0px 10px;display:inline-block;}
+header span {display:inline-block;margin: 0px 0px 0px 20px;}
+header img.logo {float:right;height:3em;padding-right:20px;}
+header img.logo:after {clear:both;}
+header a {color:#048;}
+header a:hover {color:#888;}
+
+/* General Navigation */
+div.generalnav a {color:#333;}
+div.generalnav a:hover {color:#555;}
+div.generalnav span.gennavoptions a.current {display:initial;}
+div.generalnav span.gennavoptions:hover span.gennavtrigger:after, div.generalnav span.gennavoptions:active span.gennavtrigger:after {content: ": ";}
+div.generalnav span.gennavoptions span.otherprojects {display:none;}
+div.generalnav span.gennavoptions:hover span.otherprojects, div.generalnav span.gennavoptions:active span.otherprojects {display:initial;}
+
+/* Navigation */
+nav a, div.logininfo {color:#048;font-weight:bold;display:block;width:calc(100%-10px);background-color:#ddd;vertical-align:middle;text-align:center;padding:10px 0px 10px 0px;margin-top:5px;border:1px solid #ddd;border-left-width:0px;}
+nav a:hover {background-color:#fff;border-color:#048;}
+div.logininfo {background-color:#048;font-size:0.9em;padding:7px 0px 7px 0px;color:#fff;}
+div.logininfo a {background-color:initial;font-size:0.9em;padding:initial;color:#fff;display:initial;border:initial;margin:initial;}
+div.logininfo a:hover {color:#333;}
+#username {font-weight:bold;font-style: oblique;}
+nav a.shared {color:#3cf;font-size:0.9em;width:calc(50% - 12px);display:inline-block;}
+
+/* Search */
+nav div.search {color:#048;font-weight:bold;display:block;width:calc(100%-10px);vertical-align:middle;text-align:center;padding:10px 0px 10px 0px;margin-top:5px;}
+nav div.search input {border:2px solid #ddd;border-width:2px 0px 2px 0px;height:39px;padding:0px 0px 0px 5px;width:calc(60% - 7px);margin:0px;}
+nav div.search select {border:2px solid #ddd;border-width:2px 0px 2px 0px;height:43.0px;padding:0px 10px 0px 5px;width:calc(20% - 10px);margin:0px;color:#888;-moz-appearance:none;webkit-appearance:none;text-align:center;}
+nav div.search button {background-color:#fff;color:#936;border-color:#ddd;border-left-width:0px; height:43.0px; width:20%; cursor:pointer; margin:0px;}
+nav div.search button:hover {border-color:#ccc;color:#fff;background-color:#936;}
+
+@media screen and (max-width:50em) {
+	nav div.search input {display:none;width:calc(60% - 20px);height:30.3px;}
+	nav div.search select {display:none;}
+	nav div.search button {display:none;}
+	nav a, div.logininfo {width:calc(100% - 25px);display:none;}
+	nav a.shared {width:calc(50% - 18px);display:none;}
+	nav:hover a, nav:hover div.logininfo, nav:active a, nav:active div.logininfo {display:block;}
+	nav:hover div.search input, nav:hover div.search select, nav:hover div.search button, nav:active div.search input, nav:active div.search select, nav:active div.search button {display:inline-block;}
+	nav:hover a.shared, nav:active a.shared {width:calc(50% - 18px);display:none;}
+}
+
+/* Main */
+main h2, main h3, main h4 {color:#666;border-bottom: 1px dotted #ddd;font-weight:normal;}
+main h2:hover, main h3:hover, main h4:hover {color:#048;}
+p.moreinfo {font-size:0.7em;color:#555;}
+main a:hover {background-color:#ddd;}
+span.attention {color:#f00;font-weight:bold;display:block;text-transform:uppercase;margin: 10px 10px 10px 0px;}
+
+form.edittitle input  {color:#fa5;font-weight:bold;font-size:1.2em;width:calc(80% - 8px);display:inline-block;vertical-align:top;}
+form.edittitle button {width:10%;height:29px;display:inline-block;vertical-align:top;}  
+
+table.maindesc {min-width:250px;width:30%;float:right;margin: 0px 0px 10px 10px}
+table.maindesc td {text-align:center;}
+
+main img {height:150px;cursor:pointer;border-left:5px solid #6fc;display:inline;}
+
+dl.descriptionlist {min-width:250px;width:30%;float:right;background-color:#3cc;}
+dl.descriptionlist dt {float: left;padding-right:20px;}
+dl.descriptionlist dd {margin-right:20px;}
+dl.descriptionlist dt:before {clear:both;}
+
+figure img {border-left:initial;cursor:initial;}
+figure figcaption {font-size:0.7em;color:#555;}
+
+ul.tasklist {margin-left:-40px;}
+
+li.taskslisting {margin-bottom:10px;border-color:white;}
+li.taskslisting:before {content:initial;}
+li.taskslisting h3 {color:#48a;display:inline-block;}
+
+div.taskstar {border-width:0px;display:block;width:100%;padding:0px;margin:10px 0px;border-color:white;}
+div.taskstar a {height:25px;background-color:white;border-color:#faa;border-width:2px;border-style:solid;width:calc(9% - 4px);display:inline-block;vertical-align:middle;}
+div.taskstar a:hover {background-color:#c43030;}
+div.taskstar a.currentprogress {background-color:white;padding-top:10px;padding-bottom:10px;border-width:3px;border-color:#000;border-radius:5px;}
+
+/* Progress / editing info */
+ul.editinfo {padding:10px 5% 0px 5%;}
+ul.editinfo li {border-bottom:1px dotted #aaa;}
+ul.editinfo li:before {color:#aaa;content:"\0025B7  ";}
+ul.editinfo li span.percentage {font-style:italic;color:#555;}
+ul.editinfo li span.percentage:before {content: "(";}
+ul.editinfo li span.percentage:after {content: ")";}
+
+span.duedate {font-style:italic;display:block;}
+span.duedate:before {content: "📅 "; font-style:initial; color:#48a;}
+span.duedate span.daysaway {color:#48a;font-size:0.9em;font-weight:bold;}
+span.duedate span.monthaway {color:#8d8;font-size:0.9em;font-weight:bold;}
+span.duedate span.yearaway {color:#3c3;font-size:0.9em;font-weight:bold;}
+span.duedate span.today {color:#48a;font-size:0.9em;font-weight:bold;text-transform:uppercase;}
+
+span.upcomingt:after {content: " 📅"; font-style:initial; color:#48a;}
+
+/* Options */
+div.optionbuttons {position:fixed;right:0px;top:7em;}
+div.optionbuttons a {background-color:#ddd;border:1px solid #ddd;border-width:1px 0px 1px 1px;display:block;margin-bottom:10px;width:2em;padding:0.8em 0px 0.8em 0px;text-align:center;color:#048;vertical-align:middle;z-index:10;}
+div.optionbuttons a:hover {color:#048;background-color:#fff;border-color:#048;border-radius:0px;opacity:1;}
+
+/* Task options */
+a.options {float:right;display:inline-block;width:1em;height:1em;background-color:#ddd;border:1px solid #ddd;text-align:center;font-size:1.8em;padding:4px;color:#048;}
+a.options:hover {color:#048;background-color:#fff;border-color:#048;border-radius:0px;}
+a.options:after {clear:both;}
+
+div.addnote, div.note {background-color:#eee;width:88%;margin:0px 5% 0px 5%;padding:5px 1% 5px 1%;border-radius:0px 0px 5px 5px;}
+div.addnote input {width:calc(100% - 70px);}
+div.addnote button {width:100%;}
+div.note p {}
+
+/* Graphs */
+figure.drawstats {background-color:#eee;height:100px;width:calc(100% - 90px);border:1px solid #ddd;border-bottom:2px solid #999;margin-bottom:3em;}
+figure.drawstats div {vertical-align:bottom;text-align:center;display:inline-block;height:100%;background-color:#ddd;max-height:100px;}
+figure.drawstats div a {width:100%;min-width:1px;vertical-align:bottom;display:block;border-bottom:1px solid #3cc;background-color:#2aa;}
+figure.drawstats div:hover a {background-color:#a22;border-bottom-color:#a22;border-radius:initial;}
+figure.drawstats div.legend {height:initial;font-size:0.7em;background-color:initial;}
+figure.drawstats div.legend time {transform: rotate(90deg);}
+
+figure.drawstats2 {background-color:#eee;height:400px;width:calc(100% - 90px);border:1px solid #ddd;border-bottom:2px solid #999;margin-bottom:3em;}
+figure.drawstats2 div {vertical-align:bottom;text-align:center;display:inline-block;height:100%;background-color:#ddd;}
+figure.drawstats2 div a {width:100%;min-width:1px;vertical-align:bottom;display:block;border-bottom:1px solid #3cc;background-color:#2aa;}
+figure.drawstats2 div:hover a {background-color:#a22;border-bottom-color:#a22;border-radius:initial;}
+figure.drawstats2 div.legend {height:initial;font-size:0.7em;background-color:initial;}
+figure.drawstats2 div.legend time {transform: rotate(90deg);}
+
+/* Statistical Numbers */
+dl.statsnos {}
+dl.statsnos dt {color:#a33;}
+dl.statsnos div {width:48%;display:inline-block;vertical-align:top;}
+
+/* Task overview on start page */
+div.stpoverview {display:block;background-color:#eee;padding:10px;border-top:2px solid #3cc;border-radius:0px 0px 3px 3px;font-size:0.9em;}
+div.stpoverview span {display:inline-block;border:1px solid #ccc;padding:3px;margin:0px 3px 3px 3px;background-color:#fff;}
+
+/* Journal Information */
+span.journalvol {font-style:italic;}
+span.journalvol:before, span.journalvol:after {content:"  ";}
+span.journalno:before {content:"(";}
+span.journalno:after {content:")";}
+
+/* ---- Special Cases ---- */
+/* -- Login page -- */
+
+body.loginscreen {padding:10% 20% 5em 20%;background-color:#333;width:60%;height:60%;min-height:auto;border-top-width:0px;}
+@media screen and (max-width:50em) { body.loginscreen {width:90%;padding:10% 5% 0px 5%;} }
+div.logindiv {border: 1px solid #ddd;background-color:#fff;height:100%;min-height:auto;text-align:center;border-radius:3px;position:relative;padding-bottom:1em;}
+p.errormsg {font-weight:bold;color:#f00;}
+div.logindiv form input, div.logindiv form textarea {width:60%;padding:0.5em;background-color:#eee;border:1px solid #ddd;}
+div.logindiv form input:hover, div.logindiv form textarea:hover {background-color:#fff;}
+div.logindiv form input[type="submit"] {width:60%;background-color:#fff;border:1px solid #ddd;margin:5px 0px 15px 0px;}
+div.logindiv form input[type="submit"]:hover, div.logindiv form input[type="submit"]:hover {border-color:#aaa;background-color:#eee;}
+div.logindiv a.loginrequest:hover, div.logindiv a.loginrequest:active, div.logindiv a.proginfo:hover, div.logindiv a.proginfo:active {background-color:#048;color:#fff;}
+div.logindiv a.loginrequest, div.logindiv a.proginfo {position:absolute;bottom:-0.5em;left:20px;border:1px solid #ddd;border-radius:2px;background-color:#48a;color:#fff;padding:4px 10px;}
+div.logindiv a.proginfo {left:initial;right:20px;}
+
+/* Caution Signs */
+div.caution {display:block;width:80%;border-radius:#5px;border:1px solid #ccc;padding:30px 10% 30px 10%;background-color:#48a;text-align:center;color:#fff;}
+div.caution a {background-color:#3cc;color:#fff;font-weight:bold;border: 2px solid #ddd;border-radius:3px;padding:10px;margin:0px 10px 0px 10px;}
+div.caution a:hover, div.caution a:active {background-color:#2aa;border-color:#555;}
+div.share {background-color:#3c3;}
+div.share input, div.share button {width:50%;}
+
+/* Line shown if the list is shared */
+div.sharedline {border-radius:4px;border:2px solid #555;text-align:center;padding:10px 0px 10px 0px;background-color:#3cf;color:#fff;}
+div.sharedline span {font-style:oblique;font-weight:bold;}
+
+/* Information that there is no bibtex info yet */
+p.noinfoyet {padding:15px 5px;color:#c33;font-weight:bold;background-color:#fff;border:1px solid #c33;text-align:center;}
+
+/*  Bibliographical Data  */
+dl.bibinfo {}
+dl.bibinfo dt {color:#3aa;}
+dl.bibinfo div {width:48%;display:inline-block;vertical-align:top;}
+dl.bibinfo div a {font-weight:normal;}
+#desckeyworks, #abstract {display:block;width:initial;}
+#desckeyworks dd {display:inline-block;margin-bottom:0px;}
+#desckeyworks dd a {font-weight:bold;display:block;margin-right:10px;background-color:#fff;border:1px solid #48a;color:#48a; padding:5px 10px;font-size:0.8em;}
+#desckeyworks dd a:hover, #desckeyworks dd a:active {background-color:#48a;color:#fff;border-radius:0px;}
+#cover {text-align:right;}
+#cover img {height:250px;}
+
+/* Progress bar */
+.drawprogress {height:100px;width:;background-color:#333;}
+.drawprogress #finished, .drawprogress #unfinished {display:inline-block;height:100%;}
+.drawprogress #finished {background-color:#3cc;}
+.drawprogress #unfinished {}
+
+.drawprogress div.completelyfinished#finished {background-color:#5a5;}
+
+/* Overview list on front page */
+ul.overviewlist {list-style:none;list-style-type:none;}
+ul.overviewlist a:hover {background-color:initial;}
+ul.overviewlist li {margin: 0px 0px 20px -2.5em; vertical-align:top;border-bottom:1px solid #ccc;padding:0px 0px 15px 0px;}
+ul.overviewlist li:before {content:initial;}
+ul.overviewlist li:hover img {filter: saturate(0.5);}
+ul.overviewlist li div.imgdiv {padding-right:15px;margin-right:15px;border-right:1px solid #ccc;display:inline-block;width:120px;}
+ul.overviewlist li div.contdiv {vertical-align:top;display:inline-block;width:calc(100% - 160px);}
+ul.overviewlist li div.contdiv h3 {padding-top:0px;margin-top:0px;}
+ul.overviewlist li div.contdiv #abstract {font-weight:initial;padding-left:10px;}
+ul.overviewlist li div.contdiv #abstract:before {content:'\00201C ';font-size:3em;color:#888;vertical-align:bottom;}
+
+div.pagination {text-align:center;margin-bottom:0px;padding-bottom:0px;}
+div.pagination a {background-color:#ddd;border:1px solid #ddd;color:#048;display:inline-block;margin-right:15px;padding:8px 12px;text-align:center;}
+div.pagination a.pagination-selected {background-color:#555;color:#fff;}
+div.pagination a:hover, div.pagination a:active {background-color:#fff;border-color:#048;border-radius:0px;color:#048;}
+
+/* Quotes */
+div.quotes {}
+div.quotes ul {list-style:none;list-style-type:none;margin-left:-2.5em;}
+div.quotes ul a:hover {background-color:initial;}
+div.quotes ul li:before {content:initial;}
+div.quotes ul li {margin: 0px 30px 20px 0; position: relative; vertical-align:top;padding:0px 0px 15px 0px;width:calc(48% - 20px - 1.5em);padding:10px 10px  5px 10px;display:inline-block;background-color:#eee;}
+div.quotes ul li blockquote {margin:0px 0px 8px 0px;}
+div.quotes ul li blockquote p {margin:0px 0px 3px 0px;}
+div.quotes ul li cite {width:100%;text-align:right;display:block;border-top:1px solid #ccc;color:#555;font-size:0.9em;}
+
+@media screen and (max-width:50em) {
+	div.quotes ul li {width:calc(100% - 30px);}
+}
+
+/* Enter quotes */
+div.quotes ul textarea {width:calc(100% - 15px);padding:5px;}
+div.quotes ul input {width:calc(100% - 15px);padding:5px;}
+div.quotes ul button {width:100%;}
+
+/* Marker for hidden quotes */
+span.hiddenmarker {position:absolute;top:0px;right:0px;padding:5px;background-color:#eee;color:#48a;border-radius:0px 0px 0px 5px;border:1px solid #888;border-width: 0px 0px 1px 1px;}
+
+/* Quote options */
+div.quotes ul li div.quoteoptions {display:none;}
+div.quotes ul li:hover div.quoteoptions {display:block;position:absolute;top:5px;height:calc(100% - 10px);left:100%;}
+div.quotes ul li div.quoteoptions a {display:block; padding:0px 5px 0px 5px; color:#555;margin: 5px 0px 10px 0px;border: 1px solid #eee;}
+div.quotes ul li div.quoteoptions a:hover {color:#fff;background-color:#048;border-radius:0px;}
+
+/* Quote comment */
+div.quotes ul li div.quotecomment {padding-top:0px; margin-top:0px; border-top:1px solid #888; padding:0px 10px 0px 10px;}
+div.quotes ul li div.quotecomment h4 {color:#888;font-style:italic;border:none;margin:5px 0px 0px 0px;padding:0px;font-size:1.0em;font-weight:normal;}
+
+/* Admin panel */
+main.adminpanel table input, main.adminpanel table button {width:100%;}
+
+/* ---- Settings and tools ---- */
+/* Overlay window */
+section.window {background-color:#eee;border:3px solid #ccc;position:absolute;top:10%;min-height:80%;width:70%;left:10%;padding:0px 7% 0px 5%;}
+section.window h2 {color:#08f;width:60%;display:inline-block;}
+section.window h2:before {content:"\2699  ";}
+section.window h2.tools:before {content:"\1F527  ";}
+section.window .close {text-align:right;display:inline-block;width:38%;}
+section.window .close a {border-radius:20px;padding:3px 7px 3px 7px;background-color:#555;width:0px;color:#fff;font-weight:bold;text-align:center;}
+
+section.window input, section.window textarea {width:calc(100% - 10.8px);padding:10px 0px 10px 5px;margin:0px;}
+section.window select {width:calc(100% - 0px);padding:10px 0px 10px 5px;margin:0px;}
+section.window button[type="submit"] {width:100%;padding:8px 0px 5px 0px;background-color:#fff;color:#936;margin-bottom:30px;}
+section.window span.helpline {color:#555;}
+section.window input[type="radio"] {display:inline-block;width:auto;margin:0px 10px 0px 0px;}
+
+a.deletebib {color:#555;}
+a.deletebib:hover {color:#48a;}
+
+/* Check image */
+div.imgchecker {background-color:#fff;border-radius:5px;float:right;border-color:#aaa;color:#aaa;border-style:solid;border-width:1px;width:40%;max-width:200px;padding:0px 3%;margin-bottom:10px;}
+div.imgchecker img, div.imgchecker iframe {max-width:100%;max-height:80px;margin-top:5px;border-radius:5px;}
+
+/* ---- Profile ---- */
+/* Image */
+main.userprofile img {max-height:150px;}
+/* Contact information */
+main.userprofile dd.contactinfo a {background-color:#26a;border-radius:4px;border:1px solid #ddd;display:inline-block;padding:2px 10px;font-weight:bold;color:#fff;}
+main.userprofile dd.contactinfo a:hover {background-color:#048;}
+main.userprofile dd.contactinfo a:before {font-size:0.7em;color:#aaa;vertical-align:top;padding-right:5px;}
+main.userprofile dd.contactinfo a#homepage:before {content:"Homepage ";}
+main.userprofile dd.contactinfo a#homepage {font-size:0.85em;}
+main.userprofile dd.contactinfo a#email:before {content:"E-Mail ";}
+
+/* Favorite tags */
+div.favoritetags a {display:inline-block;margin:0px 10px 10px 0px;background-color:#fff;border:1px solid #48a;color:#48a; padding:8px 8px;font-size:0.8em;}
+div.favoritetags a:hover, div.favoritetags a:active {background-color:#48a;color:#fff;border-radius:0px;}
+
+/* ---- User Rankings ---- */
+/* List */
+ol.userranking li {margin-left:-2.5em;}
+ol.userranking li {position:relative;list-style-position: inside;background-color:eee;border:1px solid #ccc;padding:5px 10px;vertical-align:middle;margin-bottom:15px;}
+ol.userranking a.url {vertical-align:middle;display:block;}
+ol.userranking li {display:block;}
+ol.userranking li img {height:2em;border:none;border-radius:100px;margin:5px 5px 0px 5px;}
+ol.userranking li div.favoritetags {background-color:#ccc;padding:10px 0px 0px 10px;margin-top:10px;}
+ol.userranking span.ranknumber {position:absolute;top:0px;right:10px;padding:5px 20px;background-color:#333;color:#fff;font-weight:bold;border-radius:0px 0px 4px 4px;border:1px solid #ddd;border-top-width:0px;}
+ol.userranking li:hover span.ranknumber {background-color:#048;}
+
+/* ---- Projects ---- */
+/* -- Projects Overview -- */
+ul.projectsoverviewlist div {display:block;padding:0px;margin:0px;}
+ul.projectsoverviewlist dt {display:inline-block;padding:0px;margin:0px;}
+ul.projectsoverviewlist dt:after {content: ": ";}
+ul.projectsoverviewlist dd {padding:0px 0px 0px 10px;display:inline-block;margin:0px;}
+
+/* -- Single Project page -- */
+/* Table of contents */
+div.tableofcontents span {background-color:#ddd;border-width:1px 0px 1px 1px;display:block;margin-bottom:10px;width:2em;padding:0.8em 0px 0.8em 0px;text-align:center;font-weight:bold;color:#048;z-index:10;}
+div.tableofcontents:hover, div.tableofcontents:active {width:400px;background-color:#fff;border:1px solid #ccc;position:absolute;top:10%;right:0px;min-height:80%;padding:10px 50px 0px 50px;z-index:20;}
+div.tableofcontents a {display:none;}
+div.tableofcontents:hover span, div.tableofcontents:active span {display:none;}
+div.tableofcontents:hover a, div.tableofcontents:active a {display:block;width:100%;border:1px solid #fff;height:initial;padding:10px 0px 10px 0px;}
+div.tableofcontents:hover a:hover, div.tableofcontents:active a:hover {border-color:#048;}
+
+span.source:before {content: " (";}
+span.source:after {content: ")";}
+
+/* Quotes from associated texts */
+/* Near a duplicate of the css of quotes from the book view */
+div.projassociatedquotes {width: calc(100% - 450px);border-top: 1px solid #888;display:inline-block;vertical-align:top;margin-right:10px;}
+div.projassociatedquotes ul {list-style:none;list-style-type:none;margin-left:-2.5em;}
+div.projassociatedquotes ul a:hover {background-color:initial;}
+div.projassociatedquotes ul li:before {content:initial;}
+div.projassociatedquotes ul li {margin: 0px 30px 20px 0; vertical-align:top;padding:0px 0px 15px 0px;width:calc(48% - 20px - 1.5em);padding:10px 10px  5px 10px;display:inline-block;background-color:#eee;border:1px solid #eee;position:relative;}
+div.projassociatedquotes ul li blockquote {margin:0px 0px 8px 0px;}
+div.projassociatedquotes ul li blockquote p {margin:0px 0px 3px 0px;}
+div.projassociatedquotes ul li cite {width:100%;text-align:right;display:block;border-top:1px solid #ccc;color:#555;font-size:0.9em;}
+
+@media screen and (max-width:80em) { div.projassociatedquotes ul li {width:calc(100% - 1.5em - 25px);} }
+
+/* Quote options */
+div.projassociatedquotes ul li div.quoteoptions {display:none;}
+div.projassociatedquotes ul li:hover div.quoteoptions {display:block;position:absolute;top:5px;height:calc(100% - 10px);left:100%;}
+div.projassociatedquotes ul li div.quoteoptions a {display:block; padding:0px 5px 0px 5px; color:#555;margin: 5px 0px 10px 0px;border-radius:0px 3px 3px 0px;border: 1px solid #ccc;border-left-width:0px;}
+div.projassociatedquotes ul li div.quoteoptions a:hover {color:#fff;background-color:#48a;}
+
+/* Quote comment */
+div.projassociatedquotes ul li div.quotecomment {padding-top:0px; margin-top:0px; border-top:1px solid #888; padding:0px 10px 0px 10px;}
+div.projassociatedquotes ul li div.quotecomment h4 {color:#888;font-style:italic;border:none;margin:5px 0px -5px 0px;padding:0px;font-size:1.0em;font-weight:normal;}
+
+div.projassociatedquotes ul li div.quotecomment textarea {width:calc(100% - 8px);}
+div.projassociatedquotes ul li div.quotecomment button {width: 100%;}
+
+
+
+div.projassociatedtextquotes {width:400px;overflow:auto; max-height:600px;padding: 0px 10px 0px 20px;border-left:1px solid #888;border-top: 1px solid #888;display:inline-block;vertical-align:top;}
+div.projassociatedtextquotes ul {list-style:none;list-style-type:none;margin-left:-2.5em;}
+div.projassociatedtextquotes ul li:before {content:initial;}
+div.projassociatedtextquotes ul li blockquote {margin:0px 0px 8px 0px;}
+div.projassociatedtextquotes ul li blockquote p {margin:0px 0px 3px 0px;}
+div.projassociatedtextquotes ul li cite {width:calc(100% - 20px);text-align:right;display:block;border-top:1px solid #48a;color:#555;font-size:0.9em;padding-left:20px;}
+div.projassociatedtextquotes blockquote div.quotefooter {position:relative;}
+div.projassociatedtextquotes blockquote div.quotefooter a.associateprojquote {position:absolute;left:0px;height:100%;background-color:#48a;top:0px;vertical-align:middle;color:#fff;padding:0px 5px 0px 5px;}
+div.projassociatedtextquotes blockquote div.quotefooter a.associateprojquote:hover {background-color:#333;border-radius:initial;}
+
+@media screen and (max-width:50em) {
+	div.projassociatedquotes {width:100%;}
+	div.projassociatedtextquotes {width:calc(100% - 2em);border-left: initial;}
+}
+
+div.projassociatedtexts {border-top: 1px solid #888;margin-top:30px;}
+div.projassociatedtexts ul {list-style:none;list-style-type:none;margin-left:-2.5em;}
+div.projassociatedtexts ul li:before {content:initial;}
+div.projassociatedtexts ul li {width:calc(33% - 2em);margin-right:2em;display:inline-block;vertical-align:top;}
+div.projassociatedtexts ul li:hover h4 {border-bottom-color:#48a;}
+div.projassociatedtexts ul li h4:first-letter {vertical-align:top;font-size:2em;color:#888;margin-right:1px;}
+
+@media screen and (max-width:75em) { div.projassociatedtexts ul li {width:calc(50% - 2em);} }
+@media screen and (max-width:50em) { div.projassociatedtexts ul li {width:100%;display:block;} }
+
+/* Simple bibliography for exporting */
+div.projassociatedtextssimple > ul {margin-left:-2em;}
+
+/* Adding associated texts to projects */
+div.addassociatedtext {width:100%;border:1px solid #888;padding:10px;}
+div.addassociatedtext h4 {margin-top:0px;padding-top:0px;}
+div.addassociatedtext select, div.addassociatedtext button {width:100%;}
+div.addassociatedtext textarea {width: calc(100% - 15px);}
+
+/* Adding data sources projects */
+div.adddatasource {width:100%;border:1px solid #888;padding:10px;}
+div.adddatasource h4 {margin-top:0px;padding-top:0px;}
+div.adddatasource select, div.adddatasource button {width: calc(100% - 10px);}
+div.adddatasource input {width: calc(50% - 10px);border:1px solid #ddd;}
+div.adddatasource textarea {width: calc(100% - 15px);border:1px solid #ddd;}
+
+ul.projectdescription {margin-left: -2.5em;}
+ul.projectdescription dl.topdescription div {width:calc(48% - 2em);margin-right:2em;display:inline-block;vertical-align:top;}
+@media screen and (max-width:50em) { .projectdescription dl.topdescription div {width:100%;display:block;margin-right:initial;} }
+ul.projectdescription dd.tag {display:block;width:initial;}
+ul.projectdescription dd.tag {display:inline-block;margin-bottom:0px;}
+ul.projectdescription dd.tag a {font-weight:bold;display:block;margin-right:10px;border:1px solid #48a; padding:5px 10px;color:#48a;font-size:0.8em;}
+ul.projectdescription dd.tag a:hover, ul.projectdescription dd.tag a:active {background-color:#48a;color:#fff;border-radius:0px;}
+ul.projectdescription ul {margin-left:-2.5em;}
+ul.projectdescription ul ul {margin-left:initial;}
+ul.projectdescription ul li:before {content: "\25B7  ";color:#48a;}
+
+/* Associated media files */
+div.projassociatedmedia {border-top: 1px solid #888;margin-top:30px;}
+div.projassociatedmedia ul {list-style:none;list-style-type:none;margin-left:-2.5em;}
+div.projassociatedmedia ul li:before {content:initial;}
+div.projassociatedmedia ul li {width:calc(33% - 2em);margin-right:2em;display:inline-block;vertical-align:top;margin-bottom:1em;}
+
+@media screen and (max-width:50em) { div.projassociatedmedia ul li {width:100%;} }
+
+div.projassociatedmedia ul li a img, div.projassociatedmedia ul li a h4 {border:1px solid #888;height:30px;width:30px;padding:10px;display:inline-block;margin:0px;vertical-align:top;}
+div.projassociatedmedia ul li a img {border-right-width:0px;border-radius:3px 0px 0px 3px;}
+div.projassociatedmedia ul li a h4 {width:calc(100% - 75px);border-radius:0px 3px 3px 0px;color:#555;}
+div.projassociatedmedia ul li a:hover img, div.projassociatedmedia ul li a:hover h4 {border-color:#333;background-color:#048;color:#fff;}
+
+/* Upload bar for associated media files */
+div.uploadassociatedmedia {border-radius:3px;border:1px solid #888;padding:5px;position:relative;}
+div.uploadassociatedmedia h4 {margin:5px 0px 10px 5px;padding:0px 0px 0px inherit;}
+
+/* Notes on projects */
+div.projnotes {border-top: 1px solid #888;margin-top:30px;}
+div.projnotes button {width:calc(100% - 4px);}
+
+/* Data sources associated to a project */
+div.projassociateddatasource {border-top: 1px solid #888;margin-top:30px;}
+div.projassociateddatasource > ul {list-style:none;list-style-type:none;margin-left:-2.5em;}
+div.projassociateddatasource > ul > li:before {content:initial;}
+div.projassociateddatasource > ul > li {width:calc(33% - 2em);margin-right:2em;display:inline-block;vertical-align:top;margin-bottom:1em;}
+
+@media screen and (max-width:50em) { div.projassociateddatasource > ul > li {width:100%;} }
+
+div.projassociateddatasource > ul > li > img, div.projassociateddatasource > ul > li > h4 {border:1px solid #888;width:30px;padding:10px;display:inline-block;margin:0px;vertical-align:top;}
+div.projassociateddatasource > ul > li > img {border-right-width:0px;border-radius:3px 0px 0px 3px;height:28px;}
+div.projassociateddatasource > ul > li > h4 {width:calc(100% - 75px);border-radius:0px 3px 3px 0px;color:#555;font-size:0.9em;min-height:28px;}
+div.projassociateddatasource > ul > li:hover > img, div.projassociateddatasource > ul > li:hover > h4 > a, div.projassociateddatasource > ul > li:hover > h4 {border-color:#333;background-color:#048;color:#fff;}
+div.projassociateddatasource > ul > li:hover > a {background-color:inherit;} 
+
+/* Project Relations */
+div.projsem {border:1px solid #aaa;}
+div#semanticnavigation {position:relative;width:20px;z-index:10;}
+div#semanticnavigation > div.projsem, div#semanticnavigation > h3 {display:none;}
+div#semanticnavigation:hover > div.projsem, div#semanticnavigation:active > div.projsem {animation-name: appear; animation-duration: 0.3s;display:block;width:760px;position:absolute;right:-0.8em;top:-0.8em;background-color:#fff;z-index:20;}
+div#semanticnavigation > span.openprojsem {background-color:#ddd;border-width:1px 0px 1px 1px;display:block;margin-bottom:10px;width:2em;padding:0.8em 0px 0.8em 0px;text-align:center;font-weight:bold;color:#048;}
+div#semanticnavigation:hover > span.openprojsem, div#semanticnavigation:active > span.openprojsem {display:none;}
+
+@keyframes appear {
+    from {display:none;height:1.6em;width:1.6em;}
+    to {display:block;height:240px;width:760px;}
+}
+
+div.projsem > div.projsemhigher {width:100%;border-bottom:1px dotted #aaa;min-height:50px;text-align:center;position:relative;}
+div.projsem > div.projsemlower {width:100%;border-top:1px dotted #aaa;min-height:50px;text-align:center;position:relative;}
+div.projsem > div.projsemhigher > a, div.projsem > div.projsemlower > a {border-right:1px dotted #aaa;display:inline-block;text-align:center; width:calc(250px);min-height:50px;height:auto;padding:5px 10px 5px 10px;vertical-align:middle;margin:0px;}
+div.projsem > div.projsemhigher > a:first-child, div.projsem > div.projsemlower > a:first-child {border-left:1px dotted #aaa;}
+div.projsem > div.projsemrelated {display:inline-block;border-right:1px dotted #aaa;min-height:120px;width:calc(60% - 1px);margin:0px;position:relative;}
+div.projsem > div.projsemrelated > a {border-bottom:1px dashed #aaa;display:block;width:calc(100% - 22px);padding:5px 10px 5px 10px;text-align:center;}
+div.projsem > div.projsemcurrent {display:inline-block;width:calc(40% - 7px);text-align:center;vertical-align:top;padding:30px 0px 30px 0px;}
+div.projsem > div.projsemcurrent > a {display:block;padding:30px;width:0px;border-radius:100%;background-color:#aaa;vertical-align:middle;text-align:center;margin:auto;}
+
+div.projsem > div > span.projsemdesc {display:none;}
+div.projsem > div:hover > span.projsemdesc, div.projsem > div:active > span.projsemdesc {position:absolute;color:#666;top:0px;left:0px;display:block;background-color:#fff;border:1px solid #aaa;border-width:0px 1px 1px 0px;padding:5px;}
+
+div.projsem > div:hover {background-color:#eee;}
+
+div.projsem a {color:#58a;}
+div.projsem div.projsemhigher:hover a:not(a:hover), div.projsem div.projsemrelated:hover a:not(a:hover), div.projsem div.projsemlower:hover a:not(a:hover) {background-color:#fff;}
+div.projsem div a:hover, div.projsem > div.projsemcurrent > a:hover {background-color:#58a;color:#fff;}
+
+/* Context information */
+div.projassociateddatasource > ul > li > div {display:none;}
+div.projassociateddatasource > ul > li:hover div, div.projassociateddatasource > ul > li:active div {display:block;color:#fff;background-color:#000;opacity:0.8;position:fixed;bottom:20px;right:20px;width:calc(400px);padding:10px;z-index:8888;}
+div.projassociateddatasource > ul > li:hover div a, div.projassociateddatasource > ul > li:active div a {color:#fff;border-bottom:1px #eee dotted; }
+dd:hover div.additionalcontextinfo h4, dd:active div.additionalcontextinfo h4 {color:#fff;border-top-width:0px;}
+
+/* Context information to search items */
+div.searchcontextinfo {padding:10px;border:1px dashed #aaa;margin-bottom:1em;}
+div.searchcontextinfo h4 {}
+div.searchcontextinfo dl div {width:calc(25% - 2em);margin-right:2em;display:inline-block;vertical-align:top;margin-bottom:0.3em;}
+@media screen and (max-width:50em) { div.searchcontextinfo dl div {width:100%;} }
+
+/* Context information */
+dd div.additionalcontextinfo, li > div.additionalcontextinfo {display:none;}
+dd:hover div.additionalcontextinfo, dd:active div.additionalcontextinfo, li:hover > div.additionalcontextinfo, li:active > div.additionalcontextinfo {display:block;color:#fff;background-color:#000;opacity:0.8;position:fixed;bottom:20px;right:20px;width:calc(400px);padding:10px;z-index:8888;}
+dd:hover div.additionalcontextinfo a, dd:active div.additionalcontextinfo a, li:hover > div.additionalcontextinfo a, li:active > div.additionalcontextinfo a {color:#fff;border-bottom:1px #eee dotted; }
+dd:hover div.additionalcontextinfo h4, dd:active div.additionalcontextinfo h4, li:hover > div.additionalcontextinfo h4, li:active > div.additionalcontextinfo h4 {color:#fff;border-top-width:0px;}
+dd:hover div.additionalcontextinfo dt, dd:active div.additionalcontextinfo dt, li:hover > div.additionalcontextinfo dt, li:active > div.additionalcontextinfo dt {color:#3aa;}
+
+/* Help information on hover */
+div div.helphover, section div.helphover {display:none;}
+@media screen and (min-width:50em) {
+	div div.helphover, section div.helphover {display:none;}
+	div:hover div.helphover, div:active div.helphover, section:hover div.helphover, section:active div.helphover {display:block;color:#fff;background-color:#000;opacity:0.8;position:fixed;bottom:20px;right:20px;width:calc(400px);padding:10px;z-index:50000000000;text-align:left;}
+	div:hover div.helphover a, div:active div.helphover a, section:hover div.helphover a, section:active div.helphover a {color:#fff;border-bottom:1px #eee dotted; }
+	div:hover div.helphover h4, div:active div.helphover h4, section:hover div.helphover h4, section:active div.helphover h4 {color:#fff;border-bottom:1px #eee dotted; }
+	div:hover div.helphover dt, div:active div.helphover dt, section:hover div.helphover dt, section:active div.helphover dt {color:#3aa;font-weight:bold; }
+}
+
+/* Advanced Search */
+form.advancedsearch input {border-bottom:1px solid #48a;border-width:0px 0px 1px 0px;}
+form.advancedsearch input:hover {border-bottom-color:#555;}
+
+/* Lists function */
+ul.listslist li {margin-bottom:0px;padding:10px 0px 10px 0px;position:relative;}
+ul.listslist > li:first-child {border-top:1px solid #ddd;}
+ul.listslist li:hover, ul.listslist li:active {background-color:#eee;}
+ul.listslist li a {font-weight:normal;}
+
+ul.listslist li span.additionalinfomarker, ul.listslist li a.additionalinfomarker {padding:10px;background-color:#ddd;color:#048;position:absolute;top:0px;right:0px;}
+ul.listslist li a.additionalinfomarker {background-color:#8bf;color:#fff;padding:10px 11.5px 10px 11.5px;} 
+ul.listslist li a.additionalinfomarker:hover, ul.listslist li a.additionalinfomarker:active {background-color:#aaa;color:#c33;} 
+
+/* --- Additional Functions --- */
+
+
+/* Search in Literature Databases */ 
+div.litdatsearch {border:1px solid #ccc;border-width:1px 0px 1px 0px;}
+div.litdatsearch li a {color:#888;font-weight:normal;}
+div.litdatsearch div input {border:1px solid #ddd;}
+div.litdatsearch div button {width:calc(100% - 4px);}
+span.searchterm {color:#58a;}
+
+@media screen and (min-width:50em) {
+	div.litdatsearch div {display:inline-block;width:40%;padding-right:5%;vertical-align:top;}
+	div.litdatsearch div p {margin-top:0px;padding-top:0px;}
+	div.litdatsearch ul {display:inline-block;width:calc(50% - 5px);padding-left:5%;border-left:1px solid #ccc;vertical-align:top;margin-top:0px;}
+}
+
+/* Statistics in Projects Page */
+div.favoritetagsdiagram {width:100%;height:200px;background-color:rgba(0, 0, 0, 0.7);border:1px solid #ccc;}
+div.favoritetagsdiagram > a {display:inline-block;position:relative;width:calc(10% - 1px);background-color:#aaa;border-right:1px solid #fff;}
+div.favoritetagsdiagram > a:last-child {border-width:0px;width:10%;}
+div.favoritetagsdiagram > a:hover {background-color:#58a;}
+div.favoritetagsdiagram > a > span {font-weight:normal;border:1px solid #ccc;display:block;position:absolute;top:100%;left:0px;width:calc(100% - 12px);padding:5px;}
+div.favoritetagsdiagram > a:hover > span {color:#fff;background-color:rgba(0, 0, 0, 0.7);}
+div.favoritetagsdiagram > a > span.counter {color:#fff;font-weight:normal;display:none;position:absolute;top:0%;left:0px;width:calc(100%);height:calc(100%);text-align:center;vertical-align:middle;font-size:3em;border:0px;padding:0px;}
+div.favoritetagsdiagram > a:hover > span.counter {display:block;background-color:initial;}
+div.favoritetagsdiagram > a:hover > span.counter:after {display:block;content:" entries";font-size:initial;z-index:0;}
+

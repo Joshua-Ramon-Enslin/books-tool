@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+<channel>
+ <lastBuildDate>Sun, 27 Mar 2016 13:49:53 +0200</lastBuildDate>
+
+
+
+<item>
+  <title></title>
+  <link></link>
+  <var></var>
+  <created>Sun, 27 Mar 2016 13:49:53 +0200</created>
+</item>
+ <item>
+  <title>JStor</title>
+  <link>https://www.jstor.org/action/doBasicSearch</link>
+  <var>Query</var>
+  <created>Sun, 27 Mar 2016 13:03:32 +0200</created>
+ </item>
+
+ <item>
+  <title>OApen</title>
+  <link>https://www.oapen.org/search</link>
+  <var>keyword</var>
+  <created>Sun, 27 Mar 2016 13:03:10 +0200</created>
+ </item>
+
+ <item>
+  <title>OApen</title>
+  <link>https://www.oapen.org/search</link>
+  <var>keyword</var>
+  <created>Sun, 27 Mar 2016 13:03:10 +0200</created>
+ </item>
+
+ <item>
+  <title>Project_Muse</title>
+  <link>https://muse.jhu.edu/results</link>
+  <var>search_term</var>
+  <created>Sun, 27 Mar 2016 13:02:57 +0200</created>
+ </item>
+
+ <item>
+  <title>Google_Scholar</title>
+  <link>https://scholar.google.de/scholar</link>
+  <var>q</var>
+  <created>Sun, 27 Mar 2016 12:54:04 +0200</created>
+ </item>
+
+
+</channel>
+</xml>

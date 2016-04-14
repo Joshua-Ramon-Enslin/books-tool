@@ -1,0 +1,561 @@
+<xml>
+	<overview>
+		<en>Overview</en>
+		<de>Übersicht</de>
+		<id>Ikhtisar</id>
+	</overview>
+	<statistics>
+		<en>Statistics</en>
+		<de>Statistik</de>
+		<id>Statistik</id>
+	</statistics>
+	<search>
+		<en>Search</en>
+		<de>Suche</de>
+		<id>Pencarian</id>
+	</search>
+	<adminpanel>
+		<en>Admin Panel</en>
+		<de>Benutzerverwaltung</de>
+		<id>Peraturan Umum</id>
+	</adminpanel>
+	<profile>
+		<en>Profile</en>
+		<de>Profil</de>
+		<id>Profil</id>
+	</profile>
+	<projects>
+		<en>Projects</en>
+		<de>Projekte</de>
+		<id>Proyek</id>
+	</projects>
+	<ranking>
+		<en>Ranking</en>
+		<de>Ranking</de>
+		<id>Ranking</id>
+	</ranking>
+	<lists>
+		<en>Lists</en>
+		<de>Listen</de>
+		<id>Daftar</id>
+	</lists>
+	<findmoretexts>
+		<en>Find More Texts</en>
+		<de>Weitere Texte</de>
+		<id>Temukan Teks Lagi</id>
+	</findmoretexts>
+	<currentlyloggedinas>
+		<en>You are currently logged in as</en>
+		<de>Sie sind eingeloggt als</de>
+		<id>Anda dilogin dengan nama pengguna</id>
+	</currentlyloggedinas>
+	<currentlyviewingdata>
+		<en>You are currently viewing data on</en>
+		<de>Sie sehen gerade Informationen zu</de>
+		<id>Anda sekarang melihat informasi</id>
+	</currentlyviewingdata>
+	<logout>
+		<en>Logout</en>
+		<de>Logout</de>
+		<id>Logout</id>
+	</logout>
+	
+	
+	<texts>
+		<en>Texts</en>
+		<de>Texte</de>
+		<id>Teks</id>
+	</texts>
+	<searchresultsfor>
+		<en>Search results for</en>
+		<de>Suchergebnisse für</de>
+		<id>Hasil pencarian</id>
+	</searchresultsfor>
+	<takingintoaccount>
+		<en>Taking into account data from between</en>
+		<de>Suche berücksichtigt Einträge hinzugefügt zwischen</de>
+		<id>Pencarian mengandung informasi dengan tanggal penambahan di antara</id>
+	</takingintoaccount>
+	<and>
+		<en>and</en>
+		<de>und</de>
+		<id>dan</id>
+	</and>
+	<filterbykeyword>
+		<en>Filter by keywords</en>
+		<de>Nach Schlagwort filtern</de>
+		<id>Saringan kata kunci</id>
+	</filterbykeyword>
+	<emptynofilter>
+		<en>Empty: no filter</en>
+		<de>Leer: kein Filter</de>
+		<id>Kosong: tiada saringan</id>
+	</emptynofilter>
+	<change>
+		<en>Change</en>
+		<de>Ändern</de>
+		<id>Ubah</id>
+	</change>
+	<filter>
+		<en>Filter</en>
+		<de>Filter</de>
+		<id>Saringan</id>
+	</filter>
+	
+	
+	<entries>
+		<en>entries</en>
+		<de>Einträge</de>
+		<id>masukan</id>
+	</entries>
+	<progressedfrompage>
+		<en>Progressed from page</en>
+		<de>Fortschritt: Von Seite</de>
+		<id>Maju dari halaman</id>
+	</progressedfrompage>
+	<topage>
+		<en>to page</en>
+		<de>zu Seite</de>
+		<id>ke halaman</id>
+	</topage>
+	<on_date>
+		<en>on</en>
+		<de>am</de>
+		<id>pada tanggal</id>
+	</on_date>
+	
+	<bookcoverof>
+		<en>Book cover of</en>
+		<de>Cover von</de>
+		<id>Cover buku</id>
+	</bookcoverof>
+	<coverof>
+		<en>Cover of</en>
+		<de>Cover von</de>
+		<id>Cover</id>
+	</coverof>
+	<bookcover>
+		<en>Book cover</en>
+		<de>Buchcover</de>
+		<id>Cover</id>
+	</bookcover>
+	<journallogo>
+		<en>Logo/Image of the journal</en>
+		<de>Logo oder Bild des Journals</de>
+		<id>Lambang atau gambaran jurnal</id>
+	</journallogo>
+	
+	<profileof>
+		<en>Profile of</en>
+		<de>Profil von</de>
+		<id>Gambaran profil</id>
+	</profileof>
+	
+	<profilepicof>
+		<en>Profile picture of</en>
+		<de>Profilbild von</de>
+		<id>Gambaran profil</id>
+	</profilepicof>
+
+	<noinfoyet>
+		<en>No bibliographical information about this entry has been added yet.</en>
+		<de>Keine bibliographischen Daten zu diesem Eintrag verfügbar</de>
+		<id>Informasi bibliografis masukan ini belum dimasukkan</id>
+	</noinfoyet>
+	
+	
+	<settings>
+		<en>Settings</en>
+		<de>Einstellungen</de>
+		<id>Peraturan</id>
+	</settings>
+	<exportbibtex>
+		<en>Export BibTeX data of all displayed entries</en>
+		<de>BibTeX-Daten aller angezeigten Einträge exportieren</de>
+		<id>Ekspor informasi berformat BibTeX semua masukan yang sekarang ditunjukkan</id>
+	</exportbibtex>
+	<exportreadingdata>
+		<en>Export data on reading progress etc.</en>
+		<de>Daten zum Lesefortschritt etc. exportieren</de>
+		<id>Expor informasi pembacaan anda dll.</id>
+	</exportreadingdata>
+	<downloadcoverimg>
+		<en>Is this the cover image?</en>
+		<de>Ist dies das Buchcover?</de>
+		<id>Apa inilah gambaran buku?</id>
+	</downloadcoverimg>
+
+
+	<yes>
+		<en>Yes</en>
+		<de>Ja</de>
+		<id>Ya</id>
+	</yes>
+	<no>
+		<en>No</en>
+		<de>Nein</de>
+		<id>Tidak</id>
+	</no>
+
+
+	<title>
+		<en>Title</en>
+		<de>Titel</de>
+		<id>Judul</id>
+	</title>
+	<authors>
+		<en>Author(s)</en>
+		<de>Autor(en)</de>
+		<id>Penulis</id>
+	</authors>
+	<year>
+		<en>Year</en>
+		<de>Jahr</de>
+		<id>Tahun</id>
+	</year>
+	<kindoftext>
+		<en>Kind of Text</en>
+		<de>Art des Textes</de>
+		<id>Jenis Teks</id>
+	</kindoftext>
+	<journal>
+		<en>Journal</en>
+		<de>Zeitschrift</de>
+		<id>Jurnal</id>
+	</journal>
+	<volume>
+		<en>Volume</en>
+		<de>Jahrgang</de>
+		<id>Volume</id>
+	</volume>
+	<issue>
+		<en>Issue</en>
+		<de>Heft</de>
+		<id>Isu</id>
+	</issue>
+	<school>
+		<en>School</en>
+		<de>Universität</de>
+		<id>Sekolah</id>
+	</school>
+	<publisher>
+		<en>Publisher</en>
+		<de>Verlag</de>
+		<id>Penerbit</id>
+	</publisher>
+	<pages>
+		<en>Pages</en>
+		<de>Seiten</de>
+		<id>Halaman</id>
+	</pages>
+	<abstract>
+		<en>Abstract</en>
+		<de>Zusammenfassung</de>
+		<id>Abstrak</id>
+	</abstract>
+	<keywords>
+		<en>Keywords</en>
+		<de>Schlagwörter</de>
+		<id>Kata Kunci</id>
+	</keywords>
+	<addedon>
+		<en>Added on</en>
+		<de>Hinzugefügt am</de>
+		<id>Ditambahkan pada tanggal</id>
+	</addedon>
+	<quotes>
+		<en>Quotes</en>
+		<de>Zitate</de>
+		<id>Kutipan</id>
+	</quotes>
+	<quote>
+		<en>Quote</en>
+		<de>Zitat</de>
+		<id>Kutipan</id>
+	</quote>
+	<send>
+		<en>Send</en>
+		<de>Abschicken</de>
+		<id>Kirim</id>
+	</send>
+	<currentpageno>
+		<en>Current page number</en>
+		<de>Aktuelle Seitenzahl</de>
+		<id>Nomor halaman terkini</id>
+	</currentpageno>
+	
+	<isthisbookcover>
+		<en>Is this the cover image</en>
+		<de>Ist dies das Buchcover</de>
+		<id>Apa itu cover bukunya</id>
+	</isthisbookcover>
+	
+	<review>
+		<en>Review</en>
+		<de>Review</de>
+		<id>Review</id>
+	</review>
+	<addareview>
+		<en>Write a review</en>
+		<de>Eine Review schreiben</de>
+		<id>Tulis review</id>
+	</addareview>
+	
+	<bibtexid>
+		<en>BibTeX ID</en>
+		<de>BibTeX ID</de>
+		<id>ID BibTeX</id>
+	</bibtexid>
+	<selfromlist>
+		<en>Select from list</en>
+		<de>Aus Liste auswählen</de>
+		<id>Pilihan dari daftar</id>
+	</selfromlist>
+	
+	<pageno>
+		<en>Page number(s)</en>
+		<de>Seitenzahl(en)</de>
+		<id>Nomor halaman</id>
+	</pageno>
+	<downloadvcard>
+		<en>Download VCard</en>
+		<de>VCard herunterladen</de>
+		<id>Unduh VCard</id>
+	</downloadvcard>
+	
+	
+	<noofbooksadded>
+		<en>Number of Added Texts</en>
+		<de>Anzahl der eingegebenen Texte</de>
+		<id>Jumlah teks yang ditambahkan</id>
+	</noofbooksadded>
+	<noofunfinished>
+		<en>Number of Unfinished Texts</en>
+		<de>Anzahl der nicht fertig gelesenen Texte</de>
+		<id>Review</id>
+	</noofunfinished>
+	<nooffinished>
+		<en>Number of All Finished Texts</en>
+		<de>Anzahl der fertig gelesenen Texte</de>
+		<id>Review</id>
+	</nooffinished>
+	<averagelength>
+		<en>Average length of texts</en>
+		<de>Durchschnittliche Länge der Texte</de>
+		<id>Rata-rata panjang teks</id>
+	</averagelength>
+	
+	<times>
+		<en>Times</en>
+		<de>Zeiten</de>
+		<id>Waktu</id>
+	</times>
+	<day>
+		<en>Day</en>
+		<de>Tag</de>
+		<id>Hari</id>
+	</day>
+	<month>
+		<en>Month</en>
+		<de>Monat</de>
+		<id>Bulan</id>
+	</month>
+	<editsbytime>
+		<en>Edits by Time</en>
+		<de>Bearbeitungen nach Zeit</de>
+		<id>Perubahan per waktu</id>
+	</editsbytime>
+	<finishedtextsbytime>
+		<en>Finished Texts by Time</en>
+		<de>Fertig gelesene Texte nach Zeit</de>
+		<id>Teks yang dibaca per waktu</id>
+	</finishedtextsbytime>
+	<numbers>
+		<en>Numbers</en>
+		<de>Zahlen</de>
+		<id>Nomor</id>
+	</numbers>
+	<averagenoofdayspassed>
+		<en>Average no. of days passed till a text is finished</en>
+		<de>Durchschnittliche Anzahl von Tagen bis ein Buch fertig gelesen ist</de>
+		<id>Waktu yang berlalu sampai buku dibaca</id>
+	</averagenoofdayspassed>
+	<username>
+		<en>Username</en>
+		<de>Benutzername</de>
+		<id>Nama pengguna</id>
+	</username>
+	<name>
+		<en>Name</en>
+		<de>Name</de>
+		<id>Nama</id>
+	</name>
+	<emailaddress>
+		<en>Email Address</en>
+		<de>E-Mail Adresse</de>
+		<id>Alamat surat-e</id>
+	</emailaddress>
+	<settingsanduserinfo>
+		<en>Settings and User Information</en>
+		<de>Einstellungen und Benutzerinformationen</de>
+		<id>Peraturan dan informasi pengguna</id>
+	</settingsanduserinfo>
+	<displayemailbelow>
+		<en>Display Email Address in Profile Page?</en>
+		<de>Soll ihre E-Mail-Adresse in ihrem Profil angezeigt werden?</de>
+		<id>Mau alamat email anda diperlihatkan di halaman profil?</id>
+	</displayemailbelow>
+	<additionalinfo>
+		<en>Additional Information</en>
+		<de>Zusätzliche Informationen</de>
+		<id>Informasi lanjust</id>
+	</additionalinfo>
+	<checkimage>
+		<en>Check image</en>
+		<de>Bild prüfen</de>
+		<id>Periksa gambaran</id>
+	</checkimage>
+	
+	<description>
+		<en>Description</en>
+		<de>Beschreibung</de>
+		<id>Deskripsi</id>
+	</description>
+	<contact>
+		<en>Contact</en>
+		<de>Kontakt</de>
+		<id>Kontak</id>
+	</contact>
+	<job>
+		<en>Job</en>
+		<de>Job</de>
+		<id>Pekerjaan</id>
+	</job>
+	<city>
+		<en>City</en>
+		<de>Stadt</de>
+		<id>Kota</id>
+	</city>
+	<affiliation>
+		<en>Affiliation</en>
+		<de>Affiliation</de>
+		<id>Afiliasi</id>
+	</affiliation>
+	<email>
+		<en>E-Mail</en>
+		<de>E-Mail</de>
+		<id>Surat-E</id>
+	</email>
+	<progress>
+		<en>Progress</en>
+		<de>Fortschritt</de>
+		<id>Kemajuan</id>
+	</progress>
+	<currenttext>
+		<en>Current Text</en>
+		<de>Zuletzt hinzugefügter Text</de>
+		<id>Teks terkini</id>
+	</currenttext>
+	<lastupdated>
+		<en>Last updated</en>
+		<de>Letztes Update</de>
+		<id>Update terkini</id>
+	</lastupdated>
+	<profilepic>
+		<en>Profile picture</en>
+		<de>Profilbild</de>
+		<id>Gambaran profil</id>
+	</profilepic>
+	
+	<favcategories>
+		<en>Favorite Keywords</en>
+		<de>Beliebte Schlagwörter</de>
+		<id>Kata kunci populer</id>
+	</favcategories>
+	
+	<tools>
+		<en>Tools</en>
+		<de>Werkzeuge</de>
+		<id>Alat-alat</id>
+	</tools>
+	
+	<filetoolarge>
+		<en>The uploaded file was too large</en>
+		<de>Die hochgeladene Datei war zu groß</de>
+		<id>File yang diunggah terlalu besar</id>
+	</filetoolarge>
+	<extnotallowed>
+		<en>File extension of the uploaded file is banned</en>
+		<de>Das herunterladen von Dateien dieses Dateityps ist nicht möglich</de>
+		<id>File dengan file extension ini tidak mungkin diunggah</id>
+	</extnotallowed>
+	<uploadbiblio>
+		<en>Upload Bibliography</en>
+		<de>Bibliographie hochladen</de>
+		<id>Unggah bibliografi</id>
+	</uploadbiblio>
+	
+	
+	<pages_lowercase>
+		<en>pages</en>
+		<de>Seiten</de>
+		<id>halaman</id>
+	</pages_lowercase>
+	<editedtaskspermonth>
+		<en>Edited text entries per month</en>
+		<de>Bearbeitete Texteinträge pro Monat</de>
+		<id>Masukan teks yang disunting per bulan</id>
+	</editedtaskspermonth>
+	
+	<switchlang>
+		<en>Switch Language</en>
+		<de>Sprache wechseln</de>
+		<id>Ubah bahasa</id>
+	</switchlang>
+	<english>
+		<en>English</en>
+		<de>Englisch</de>
+		<id>Inggris</id>
+	</english>
+	<german>
+		<en>German</en>
+		<de>Deutsch</de>
+		<id>Jerman</id>
+	</german>
+	<indonesian>
+		<en>Indonesian</en>
+		<de>Indonesien</de>
+		<id>Indonesia</id>
+	</indonesian>
+	<dlbibliography>
+		<en>Download Bibliography</en>
+		<de>Bibliographie herunterladen</de>
+		<id>Unduh bibliografi</id>
+	</dlbibliography>
+	<yourbibliography>
+		<en>Your Bibliography</en>
+		<de>Ihre Bibliographie</de>
+		<id>Bibliografi anda</id>
+	</yourbibliography>
+	<collectivebibliography>
+		<en>Collective Bibliography</en>
+		<de>Kollektive Bibliographie</de>
+		<id>Bibliografi kolektif</id>
+	</collectivebibliography>
+	<startedreadingnew>
+		<en>Started reading something new?</en>
+		<de>Text hinzufügen</de>
+		<id>Tambahkan teks</id>
+	</startedreadingnew>
+	<nopageinfo>
+		<en>No page number provided. Reading progress cannot be measured without.</en>
+		<de>Es wurde noch keine Seitenzahl zu diesem Text eingegeben. Lesefortschritt kann ohne nicht berechnet werden.</de>
+		<id>Informasi halaman belum dimasukkan. Karena begitu, kemajuan pembacaan tidak bisa dihitung.</id>
+	</nopageinfo>
+	
+	<addproject>
+		<en>Add Project</en>
+		<de>Projekt hinzufügen</de>
+		<id>Tambahkan proyek</id>
+	</addproject>
+</xml>
